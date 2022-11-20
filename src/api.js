@@ -71,7 +71,7 @@ function formatResponse(rows) {
   };
 }
 
-async function handler(req, res) {
+export async function handler(req, res) {
   const rows = await getRows();
   const rowsSortedByTitle = sortByTitle(rows);
   const response = formatResponse(rowsSortedByTitle);
